@@ -3,53 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Shopping Cart Layout</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        .block-heading {
-            color: #3b99e0;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .summary {
-            border-top: 3px solid #5ea4f3;
-            background-color: #f7fbff;
-            padding: 20px;
-        }
-    </style>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="block-heading">Shopping Cart</h1>
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="product">
-                    <div class="row">
-                        <div class="col-6">
-                            <img src="image1.jpg" class="img-fluid" alt="Product 1">
+        <h1>Shopping cart</h1>
+        <p class="subtitle">The customer is very important, the customer will be followed by the customer. Now, as an urn, I have no right to be in possession of property.</p>
+        
+        <div class="cart-container">
+            <div class="cart-items">
+                <!-- Cart Item Template -->
+                <div class="cart-item">
+                    <img src="https://placehold.co/100x100" alt="iPhone" class="product-image">
+                    <div class="product-info">
+                        <a href="#" class="remove-link">I am very sorry</a>
+                        <div class="specs">
+                            <p>Display: 5 inches</p>
+                            <p>RAM: 4GB</p>
+                            <p>Memory: 32GB</p>
                         </div>
-                        <div class="col-6">
-                            <img src="image2.jpg" class="img-fluid" alt="Product 2">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <img src="image3.jpg" class="img-fluid" alt="Product 3">
+                        <div class="quantity-section">
+                            <label>Quantity:</label>
+                            <input type="number" value="1" min="0" class="quantity-input">
+                            <span class="price">$120</span>
                         </div>
                     </div>
                 </div>
+                <!-- Repeat cart item 2 more times for the example -->
             </div>
-            <div class="col-lg-4">
-                <div class="summary">
-                    <h2>Price Summary</h2>
-                    <p>Total: $XX.XX</p>
-                    <button class="btn btn-primary">Checkout</button>
+			 <div class="cart-container">
+            <div class="cart-items">
+                <!-- Cart Item Template -->
+                <div class="cart-item">
+                    <img src="https://placehold.co/100x100" alt="iPhone" class="product-image">
+                    <div class="product-info">
+                        <a href="#" class="remove-link">I am very sorry</a>
+                        <div class="specs">
+                            <p>Display: 5 inches</p>
+                            <p>RAM: 4GB</p>
+                            <p>Memory: 32GB</p>
+                        </div>
+                        <div class="quantity-section">
+                            <label>Quantity:</label>
+                            <input type="number" value="1" min="0" class="quantity-input">
+                            <span class="price">$120</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat cart item 2 more times for the example -->
+            </div>
+				  <div class="cart-container">
+            <div class="cart-items">
+                <!-- Cart Item Template -->
+                <div class="cart-item">
+                    <img src="https://placehold.co/100x100" alt="iPhone" class="product-image">
+                    <div class="product-info">
+                        <a href="#" class="remove-link">I am very sorry</a>
+                        <div class="specs">
+                            <p>Display: 5 inches</p>
+                            <p>RAM: 4GB</p>
+                            <p>Memory: 32GB</p>
+                        </div>
+                        <div class="quantity-section">
+                            <label>Quantity:</label>
+                            <input type="number" value="1" min="0" class="quantity-input">
+                            <span class="price">$120</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat cart item 2 more times for the example -->
+            </div>
+
+            <div class="summary-section">
+                <h2>Summary</h2>
+                <div class="summary-details">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>$360</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Discount</span>
+                        <span>$0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span>$0</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span>$360</span>
+                    </div>
+                    <button class="checkout-btn">checkout</button>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
