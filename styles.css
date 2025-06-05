@@ -91,6 +91,8 @@ h1 {
 .summary-section {
     flex: 1; /* Allows this section to take less space */
     padding: 20px;
+	background-color: #f7fbff;
+	border-top: 5px solid #5ea4f3;
 }
 
 .summary-details {
