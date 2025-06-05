@@ -1,102 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="block-heading">Shopping Cart</h1>
-        <p class="subtitle">The customer is very important, the customer will be followed by the customer.</p>
-        
-        <div class="cart-container d-flex">
-            <div class="cart-items flex-fill">
-                <h2 class="block-heading">Your Products</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="cart-item">
-                            <img src="data:image/jpeg;base64,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" alt="iPhone" class="product-image">
-                            <div class="product-info">
-                                <a href="#" class="remove-link">Remove</a>
-                                <div class="specs">
-                                    <p>Display: 5 inches</p>
-                                    <p>RAM: 4GB</p>
-                                    <p>Memory: 32GB</p>
-                                </div>
-                                <div class="quantity-section">
-                                    <label>Quantity:</label>
-                                    <input type="number" value="1" min="0" class="quantity-input">
-                                    <span class="price">$120</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="cart-item">
-                            <img src="data:image/jpeg;base64,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" alt="iPhone" class="product-image">
-                            <div class="product-info">
-                                <a href="#" class="remove-link">Remove</a>
-                                <div class="specs">
-                                    <p>Display: 5 inches</p>
-                                    <p>RAM: 4GB</p>
-                                    <p>Memory: 32GB</p>
-                                </div>
-                                <div class="quantity-section">
-                                    <label>Quantity:</label>
-                                    <input type="number" value="1" min="0" class="quantity-input">
-                                    <span class="price">$120</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="cart-item">
-                            <img src="data:image/jpeg;base64,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" alt="iPhone" class="product-image">
-                            <div class="product-info">
-                                <a href="#" class="remove-link">Remove</a>
-                                <div class="specs">
-                                    <p>Display: 5 inches</p>
-                                    <p>RAM: 4GB</p>
-                                    <p>Memory: 32GB</p>
-                                </div>
-                                <div class="quantity-section">
-                                    <label>Quantity:</label>
-                                    <input type="number" value="1" min="0" class="quantity-input">
-                                    <span class="price">$120</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="summary-section">
-                <h2>Summary</h2>
-                <div class="summary-details">
-                    <div class="summary-row">
-                        <span>Subtotal</span>
-                        <span>$360</span>
-                    </div>
-                    <div class="summary-row">
-                        <span>Discount</span>
-                        <span>$0</span>
-                    </div>
-                    <div class="summary-row">
-                        <span>Shipping</span>
-                        <span>$0</span>
-                    </div>
-                    <div class="summary-row total">
-                        <span>Total</span>
-                        <span>$360</span>
-                    </div>
-                    <button class="checkout-btn">Checkout</button>
-                </div>
-            </div>
+  <main class="page">
+    <section class="shopping-cart dark">
+      <div class="container">
+        <!-- Only one block-heading remains -->
+        <div class="block-heading">
+          <h1>Shopping Cart</h1>
         </div>
-    </div>
-    <script src="app.js"></script>
+
+        <h2 class="product-heading">Your Products</h2>
+
+        <!-- Added layout wrapper -->
+        <div class="row layout">
+          <!-- Product 1 -->
+          <div class="col-lg-8">
+            <div class="cart-item product">
+              <div class="row">
+                <div class="col-md-3">
+                  <img class="img-fluid mx-auto d-block image" src="assets/img/image.jpg">
+                </div>
+                <div class="col-md-8">
+                  <div class="info">
+                    <div class="row">
+                      <div class="col-md-5 product-name">
+                        <div class="product-name">
+                          <a href="#">Lorem Ipsum dolor</a>
+                          <div class="product-info">
+                            <div>Display: <span class="value">5 inch</span></div>
+                            <div>RAM: <span class="value">4GB</span></div>
+                            <div>Memory: <span class="value">32GB</span></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 quantity">
+                        <label for="quantity">Quantity:</label>
+                        <input id="quantity" type="number" value="1" class="form-control quantity-input">
+                      </div>
+                      <div class="col-md-3 price">
+                        <span>$120</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="col-lg-8">
+            <div class="cart-item product">
+              <div class="row">
+                <div class="col-md-3">
+                  <img class="img-fluid mx-auto d-block image" src="assets/img/image.jpg">
+                </div>
+                <div class="col-md-8">
+                  <div class="info">
+                    <div class="row">
+                      <div class="col-md-5 product-name">
+                        <div class="product-name">
+                          <a href="#">Lorem Ipsum dolor</a>
+                          <div class="product-info">
+                            <div>Display: <span class="value">5 inch</span></div>
+                            <div>RAM: <span class="value">4GB</span></div>
+                            <div>Memory: <span class="value">32GB</span></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 quantity">
+                        <label for="quantity">Quantity:</label>
+                        <input id="quantity" type="number" value="1" class="form-control quantity-input">
+                      </div>
+                      <div class="col-md-3 price">
+                        <span>$120</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- /.layout -->
+      </div>
+    </section>
+  </main>
 </body>
 </html>
